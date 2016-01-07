@@ -9,6 +9,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 
 public class Assets{
     public static Texture badlogic;
+    public static Texture scene;
     public static Skin uiSkin;
 
     public static void load(AssetManager assetManager){
@@ -19,10 +20,12 @@ public class Assets{
             }
         });
         assetManager.load("badlogic.jpg", Texture.class);
+        assetManager.load("scene.png", Texture.class);
         assetManager.load("uiskin.json", Skin.class);
         assetManager.finishLoading();
 
         badlogic=assetManager.get("badlogic.jpg");
+        scene=assetManager.get("scene.png");
         uiSkin=assetManager.get("uiskin.json");
     }
 

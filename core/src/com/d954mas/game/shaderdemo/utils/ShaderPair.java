@@ -22,6 +22,7 @@ public class ShaderPair{
         return shaderProgram;
     }
 
+
     public void dispose() {
         shaderProgram.dispose();
     }

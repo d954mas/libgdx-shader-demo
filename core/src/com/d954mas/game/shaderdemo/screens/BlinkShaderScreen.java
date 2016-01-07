@@ -8,16 +8,11 @@ import com.d954mas.game.shaderdemo.utils.Assets;
 import com.d954mas.game.shaderdemo.utils.ShaderPair;
 import com.d954mas.game.shaderdemo.utils.UIUtils;
 
-public class BlinkShaderScreen extends AbstractScreen {
+public class BlinkShaderScreen extends ScreenWithImage {
+
     @Override
-    public void show() {
-        super.show();
-        shaderPair=new ShaderPair(null,"blink");
-        ShaderDemo.stage.getBatch().setShader(shaderPair.getShaderProgram());
-        Image badlogic=new Image(Assets.badlogic);
-        UIUtils.setSizeByWidth(badlogic, 400);
-        UIUtils.setToCenter(badlogic, group);
-        group.addActor(badlogic);
+    protected ShaderPair getShaderPair() {
+        return new ShaderPair(null,"blink");
     }
 
     private float time;

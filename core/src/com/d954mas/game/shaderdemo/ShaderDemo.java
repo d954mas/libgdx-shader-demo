@@ -1,6 +1,5 @@
 package com.d954mas.game.shaderdemo;
 
-import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -9,7 +8,6 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.FitViewport;
-import com.d954mas.game.shaderdemo.screens.BlinkShaderScreen;
 import com.d954mas.game.shaderdemo.screens.MainScreen;
 import com.d954mas.game.shaderdemo.utils.Assets;
 

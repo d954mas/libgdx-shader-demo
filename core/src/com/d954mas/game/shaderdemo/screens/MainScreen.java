@@ -20,8 +20,14 @@ public class MainScreen extends AbstractScreen{
         ShaderDemo.stage.getBatch().setShader(shaderPair.getShaderProgram());
         table=new Table(Assets.uiSkin);
         table.setFillParent(true);
+        table.defaults().spaceBottom(10f);
         group.addActor(table);
         addShaderButton("blinkShader", BlinkShaderScreen.class);
+        addShaderButton("blackAndWhite", BlackAndWhiteScreen.class);
+        addShaderButton("grayscale", BlackAndWhiteScreen.class);
+        addShaderButton("invertedColors", InvertedColorsScreen.class);
+        addShaderButton("blackGradient", BlackGradient.class);
+        addShaderButton("vignette", VignetteScreen.class);
     }
 
     private void addShaderButton(String text,final Class<? extends Screen> clazz){
@@ -41,7 +47,7 @@ public class MainScreen extends AbstractScreen{
                 }
             }
         });
-        table.add(shaderButton);
+        table.add(shaderButton).row();
     }
 
 }
