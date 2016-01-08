@@ -8,14 +8,14 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.d954mas.game.shaderdemo.utils.Assets;
 
 public class ProgressBarWithText extends Table {
-    private Slider slider;
+    private Slider progressBar;
     public ProgressBarWithText(String title,float min,float max,float stepSize){
         super(Assets.uiSkin);
         defaults().spaceLeft(10f);
-        slider=new Slider(min,max,stepSize,false,Assets.uiSkin);
+        progressBar=new Slider(min,max,stepSize,false,Assets.uiSkin);
         add(title);
         add(String.valueOf(min));
-        add(slider);
+        add(progressBar);
         add(String.valueOf(max));
     }
 
@@ -28,6 +28,6 @@ public class ProgressBarWithText extends Table {
     }
 
     public Slider getSlider() {
-        return slider;
+        return progressBar;
     }
 }

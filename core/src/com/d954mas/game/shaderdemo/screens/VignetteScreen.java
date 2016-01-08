@@ -27,9 +27,9 @@ public class VignetteScreen extends AbstractScreen {
         image.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                //shaderEnabled = !shaderEnabled;
-               // if (shaderEnabled) ShaderDemo.stage.getBatch().setShader(shaderPair.getShaderProgram());
-                //else ShaderDemo.stage.getBatch().setShader(null);
+                shaderEnabled = !shaderEnabled;
+                if (shaderEnabled) ShaderDemo.stage.getBatch().setShader(shaderPair.getShaderProgram());
+                else ShaderDemo.stage.getBatch().setShader(null);
             }
         });
         image.setFillParent(true);
@@ -42,6 +42,7 @@ public class VignetteScreen extends AbstractScreen {
         shaderPair.getShaderProgram().end();
 
         table=new Table();
+        table.debugAll();
         table.setFillParent(true);
         table.defaults().right();
 

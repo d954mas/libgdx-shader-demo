@@ -20,7 +20,6 @@
 
 void main() {
         vec4 color = texture2D(u_texture, v_texCoords);
-
         //1. VIGNETTE
         //determine center
         vec2 position = (gl_FragCoord.xy / resolution.xy) - vec2(0.5);

@@ -10,6 +10,8 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 public class Assets{
     public static Texture badlogic;
     public static Texture scene;
+    public static Texture stones;
+    public static Texture stonesNormalMap;
     public static Skin uiSkin;
 
     public static void load(AssetManager assetManager){
@@ -21,12 +23,17 @@ public class Assets{
         });
         assetManager.load("badlogic.jpg", Texture.class);
         assetManager.load("scene.png", Texture.class);
+        assetManager.load("stones.png", Texture.class);
+        assetManager.load("stonesNormalMap.png", Texture.class);
+        assetManager.load("scene.png", Texture.class);
         assetManager.load("uiskin.json", Skin.class);
         assetManager.finishLoading();
 
         badlogic=assetManager.get("badlogic.jpg");
         scene=assetManager.get("scene.png");
         uiSkin=assetManager.get("uiskin.json");
+        stones=assetManager.get("stones.png");
+        stonesNormalMap=assetManager.get("stonesNormalMap.png");
     }
 
 }
