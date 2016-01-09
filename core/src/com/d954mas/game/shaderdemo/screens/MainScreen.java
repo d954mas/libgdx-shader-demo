@@ -29,6 +29,7 @@ public class MainScreen extends AbstractScreen{
         addShaderButton("blackGradient", BlackGradient.class);
         addShaderButton("vignette", VignetteScreen.class);
         addShaderButton("stonesNormals", StonesNormalsScreen.class);
+        addShaderButton("presentBox", PresentBoxScreen.class);
     }
 
     private void addShaderButton(String text,final Class<? extends Screen> clazz){
