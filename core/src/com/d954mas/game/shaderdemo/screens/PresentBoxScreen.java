@@ -29,7 +29,7 @@ public class PresentBoxScreen extends AbstractScreen  {
             });
             image.setFillParent(true);
             group.addActor(image);
-       // group.addActor(backButton);
+        group.addActor(backButton);
     }
 
     @Override
