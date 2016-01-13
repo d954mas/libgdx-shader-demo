@@ -12,6 +12,7 @@ public class Assets{
     public static Texture scene;
     public static Texture stones;
     public static Texture stonesNormalMap;
+    public static Texture ship;
     public static Skin uiSkin;
 
     public static void load(AssetManager assetManager){
@@ -26,6 +27,7 @@ public class Assets{
         assetManager.load("stones.png", Texture.class);
         assetManager.load("stonesNormalMap.png", Texture.class);
         assetManager.load("scene.png", Texture.class);
+        assetManager.load("ship.png", Texture.class);
         assetManager.load("uiskin.json", Skin.class);
         assetManager.finishLoading();
 
@@ -34,6 +36,7 @@ public class Assets{
         uiSkin=assetManager.get("uiskin.json");
         stones=assetManager.get("stones.png");
         stonesNormalMap=assetManager.get("stonesNormalMap.png");
+        ship=assetManager.get("ship.png");
     }
 
 }
