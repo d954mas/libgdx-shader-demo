@@ -7,13 +7,13 @@ import com.d954mas.game.shaderdemo.utils.ShaderPair;
 import com.d954mas.game.shaderdemo.utils.UIUtils;
 
 public abstract class ScreenWithImage extends AbstractScreen {
-
+    protected  Image badlogic;
     @Override
     public void show() {
         super.show();
         shaderPair=getShaderPair();
         ShaderDemo.stage.getBatch().setShader(shaderPair.getShaderProgram());
-        Image badlogic=new Image(Assets.badlogic);
+        badlogic=new Image(Assets.badlogic);
         UIUtils.setSizeByWidth(badlogic, 400);
         UIUtils.setToCenter(badlogic, group);
         group.addActor(badlogic);
